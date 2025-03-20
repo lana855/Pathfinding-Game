@@ -7,7 +7,7 @@ This project is a text-based pathfinding game implemented in C++. The goal is to
 - **Dijkstra's Algorithm**: The hidden path is computed using Dijkstra's algorithm.
 - **Interactive Gameplay**: Users input coordinates (`x y`) to navigate through a grid, with consecutive points forming the path.
 - **Random Grid**: A random grid is generated with walls, a start point, and an end point.
-- **Hidden Achievements**: Players who correctly find the hidden path are awarded an achievement in the form of heart-shaped ASCII art.
+- **Hidden Achievements**: Players who correctly find the hidden path are awarded an achievement in the form of heart-shaped Unicode art.
 - **UTF-16 Encoding**: The game uses UTF-16 encoding to display special characters (e.g., hearts) in the console.
 
 ## How to Play
@@ -15,7 +15,7 @@ This project is a text-based pathfinding game implemented in C++. The goal is to
 1. **Start the Game**: After entering your name, a random grid will be generated.
 2. **Navigate the Grid**: You will be prompted to input `(x y)` coordinates step-by-step. Each point you enter will be checked to ensure it's valid (within the grid, not a wall, and consecutive to the last point).
 3. **Reach the End**: When you reach the end point, the game checks if your path matches the hidden path found by Dijkstra’s algorithm.
-4. **Unlock Hidden Achievement**: If your path is correct, a hidden achievement (a heart-shaped ASCII art) is displayed.
+4. **Unlock Hidden Achievement**: If your path is correct, a hidden achievement (a heart-shaped Unicode art) is displayed.
 
 ## Features and Functions
 
@@ -29,7 +29,7 @@ Generates a random point within a specified quadrant of the grid.
 Implements Dijkstra’s algorithm to find the hidden paths from the start point to the end point.
 
 ### `Hidden(const wstring& name)`
-Displays a hidden achievement message with ASCII art when the user completes the path correctly.
+Displays a hidden achievement message with Unicode art when the user completes the path correctly.
 
 ### `main()`
 This is the entry point where the grid is set up, the user interacts with the game, and the pathfinding process happens.
