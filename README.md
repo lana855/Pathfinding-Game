@@ -6,7 +6,7 @@ This project is a text-based pathfinding game implemented in C++. The goal is to
 
 - **Dijkstra's Algorithm**: The hidden path is computed using Dijkstra's algorithm.
 - **Interactive Gameplay**: Users input coordinates (`x y`) to navigate through a grid, with consecutive points forming the path.
-- **Random Grid Generation**: A random grid is generated with walls, a start point, and an end point.
+- **Random Grid**: A random grid is generated with walls, a start point, and an end point.
 - **Hidden Achievements**: Players who correctly find the hidden path are awarded an achievement in the form of heart-shaped ASCII art.
 - **UTF-16 Encoding**: The game uses UTF-16 encoding to display special characters (e.g., hearts) in the console.
 
