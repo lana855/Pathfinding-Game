@@ -1,6 +1,6 @@
 # Pathfinding Game with Dijkstra's Algorithm in C++
 
-This project is a text-based pathfinding game implemented in C++. The goal of the game is to find a valid path between a start point (`S`) and an end point (`E`) on a grid, avoiding randomly placed walls (`#`). The player inputs coordinates to navigate the grid, and if the path matches the hidden path computed using **Dijkstra's Algorithm**, a hidden achievement is unlocked.
+This project is a text-based pathfinding game implemented in C++. The goal is to find a valid path between a start point (`S`) and an end point (`E`) on a grid, avoiding randomly placed walls (`#`). The player inputs coordinates to navigate the grid, and if the path matches the hidden path computed using **Dijkstra's Algorithm**, a hidden achievement is unlocked.
 
 ## Key Features
 
@@ -14,7 +14,7 @@ This project is a text-based pathfinding game implemented in C++. The goal of th
 
 1. **Start the Game**: After entering your name, a random grid will be generated.
 2. **Navigate the Grid**: You will be prompted to input `(x y)` coordinates step-by-step. Each point you enter will be checked to ensure it's valid (within the grid, not a wall, and consecutive to the last point).
-3. **Reach the End**: When you reach the end point, the game checks if your path matches the shortest path found by Dijkstra’s algorithm.
+3. **Reach the End**: When you reach the end point, the game checks if your path matches the hidden path found by Dijkstra’s algorithm.
 4. **Unlock Hidden Achievement**: If your path is correct, a hidden achievement (a heart-shaped ASCII art) is displayed.
 
 ## Features and Functions
