@@ -92,9 +92,9 @@ vector<vector<pair<int, int>>> dijkstra(const vector<vector<int>>& grid, pair<in
         }
     }
 
-	vector<vector<pair<int, int>>> allP;    // store all *Hidden* paths
+    vector<vector<pair<int, int>>> allP;    // store all *Hidden* paths
     vector<pair<int, int>> path;
-    std::function<void(pair<int, int>)> buildP= [&](pair<int, int> node) {
+    std::function<void(pair<int, int>)> buildP = [&](pair<int, int> node) {
         if (node == start) {
             path.push_back(node);
             reverse(path.begin(), path.end());
@@ -176,7 +176,7 @@ int main() {
     wcout << L"End Point: (" << end.first << ", " << end.second << ")\n";
     wcout << L"------------------------------------\n";
 
-	vector<vector<pair<int, int>>> allHP = dijkstra(grid, start, end);  // Find all *Hidden* paths
+    vector<vector<pair<int, int>>> allHP = dijkstra(grid, start, end);  // Find all *Hidden* paths
     if (allHP.empty()) {
         wcout << L"No valid path found. Please restart the program (\x00AC_\x00AC\")\n";
         return 1;
@@ -185,7 +185,7 @@ int main() {
     wcout << L"Enter the path you think connects the start and end point (enter points as x y) " << endl;
     wcout << endl;
 
-	vector<pair<int, int>> userP;  // store user path
+    vector<pair<int, int>> userP;  // store user path
     userP.push_back(start);
 
     while (true) {
@@ -205,7 +205,7 @@ int main() {
         }
 
         pair<int, int> lastPt = userP.back();
-		bool Con= false;   // check if the points are consecutive
+        bool Con = false;   // check if the points are consecutive
         for (int i = 0; i < 4; ++i) {
             if (lastPt.first + dx[i] == x && lastPt.second + dy[i] == y) {
                 Con = true;
@@ -223,28 +223,26 @@ int main() {
         Grid(grid);
         wcout << L"------------------------------------\n";
 
-        if (make_pair(x, y) == end) {
-            wcout << L"Great Job! \x300C\x20\x2736\x20 " << name << L"\x20\x2736\x20\x300D, you've reached your destination \x22C6\x02DA\x273F\x02D6\xB0\n";
-            userP.push_back(end); 
-            break;
-        }
 
         // Check if current point is adjacent to end point
-        bool adj= false;
+        bool adj = false;
         for (int i = 0; i < 4; ++i) {
             if (x + dx[i] == end.first && y + dy[i] == end.second) {
-                adj= true;
+                adj = true;
                 break;
             }
         }
+
         if (adj) {
-            wcout << L"Good Job! \x300C\x20\x2736\x20 " << name << L"\x20\x2736\x20\x300D, you've reached a point next to your destination \x22C6\x02DA\x273F\x02D6\xB0\n";
-            userP.push_back(end); 
+            wcout << L"Great Job! \x300C\x20\x2736\x20 " << name << L"\x20\x2736\x20\x300D, you've reached your destination \x22C6\x02DA\x273F\x02D6\xB0\n";
+            userP.push_back(end);
             break;
         }
+
     }
 
-	bool Correct = false;     // check if user path is the same as the *Hidden* path
+
+    bool Correct = false;     // check if user path is the same as the *Hidden* path
     for (const auto& path : allHP) {
         if (userP == path) {
             Correct = true;
@@ -261,3 +259,4 @@ int main() {
 
     return 0;
 }
+
