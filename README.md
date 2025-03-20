@@ -43,22 +43,6 @@ This is the entry point where the grid is set up, the user interacts with the ga
 ## Compilation and Running
 
 
-### Key Sections in the `README.md`:
-
-1. **Project Overview**: Brief description of the game and its functionality.
-2. **Key Features**: Summary of the game’s core features (e.g., Dijkstra's algorithm, hidden achievements, random grid generation).
-3. **How to Play**: A clear, step-by-step explanation for users to start the game and understand the gameplay mechanics.
-4. **Functions**: Brief descriptions of key functions in the code (such as `Grid`, `randomPt`, `dijkstra`, etc.).
-5. **Requirements**: Any dependencies or tools required to run the game (e.g., C++11, compiler).
-6. **Compilation and Running Instructions**: Step-by-step guide on how to compile and run the game.
-7. **Example Output**: Sample output of the game when the user completes the path.
-8. **Contributing**: Instructions for anyone who wants to contribute to the project.
-9. **License**: Details of the licensing (typically MIT or other open-source licenses).
-10. **Acknowledgements**: Credit for algorithms or resources used in the project.
-
-This `README.md` provides a complete guide for users to get started with the game and for contributors to participate in the project.
-
-
 1. Clone the repository:
    ```bash
    git clone https://github.com/lana855/pathfinding-game.git
