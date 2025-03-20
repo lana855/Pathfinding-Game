@@ -115,7 +115,7 @@ vector<vector<pair<int, int>>> dijkstra(const vector<vector<int>>& grid, pair<in
 }
 
 void Hidden(const wstring& name) {
-    wcout << L"You Did It! Your path is the same as the shortest path calculated by the algorithm!\n";
+    wcout << L"You Did It! Your inputs match the shortest path calculated by the algorithm!\n";
     wcout << L"Hidden Achievement Unlocked: Heart Shape \x2661\xB4 ^ \x1D17 ^ \x60\x2661 \n\n";
 
     wcout << L"  \x2764 \x2764    \x2764 \x2764\n";
@@ -144,7 +144,7 @@ int main() {
     wcout << "Please read the following instructions carefully before playing:\n";
     wcout << L"1. You are given a grid with walls, start point (S), and end point (E).\n";
     wcout << L"2. You need to find a path between both points.\n";
-    wcout << L"3. Enter the path step by step by providing the next point (x y). You can use the border coordinates as your guide.\n";
+    wcout << L"3. Enter the path step by step by providing the next point inputs (x y). You can use the border coordinates as your guide.\n";
     wcout << L"4. The path must be consecutive (left, right, up, down).\n";
     wcout << L"Write your path carefully you may hit a wall or unlock a hidden achievement \x2661\xB4 ^ \x1D17 ^ \x60\x2661 \n";
     wcout << L"Press any key to continue...\n";
@@ -192,7 +192,7 @@ int main() {
         int x, y;
         wcout << L"Enter next point (x y): \n";
         if (!(wcin >> x >> y)) {
-            wcout << L"Invalid input! Please enter integer values (\x00AC_\x00AC\")\n";
+            wcout << L"Invalid Input! Please enter integer values (\x00AC_\x00AC\")\n";
             wcin.clear();
             wcin.ignore(numeric_limits<streamsize>::max(), L'\n');
             continue;
@@ -200,7 +200,7 @@ int main() {
         wcout << endl;
 
         if (x < 0 || x >= static_cast<int>(grid.size()) || y < 0 || y >= static_cast<int>(grid[0].size()) || grid[x][y] == -1) {
-            wcout << L"Invalid point! Try to avoid walls (\x00AC_\x00AC\") \n";
+            wcout << L"Invalid Input! Try to avoid walls (\x00AC_\x00AC\") \n";
             continue;
         }
 
@@ -213,7 +213,7 @@ int main() {
             }
         }
         if (!Con) {
-            wcout << L"Invalid input! Points must be consecutive (\x00AC_\x00AC\")\n";
+            wcout << L"Invalid Input! Points must be consecutive (\x00AC_\x00AC\")\n";
             continue;
         }
 
@@ -234,7 +234,7 @@ int main() {
         }
 
         if (adj) {
-            wcout << L"Great Job! \x300C\x20\x2736\x20 " << name << L"\x20\x2736\x20\x300D, you've reached your destination \x22C6\x02DA\x273F\x02D6\xB0\n";
+            wcout << L"Great Job! \x300C\x20\x2736\x20 " << name << L"\x20\x2736\x20\x300D. You've reached your destination \x22C6\x02DA\x273F\x02D6\xB0\n";
             userP.push_back(end);
             break;
         }
