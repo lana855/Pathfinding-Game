@@ -31,7 +31,7 @@ void Grid(const vector<vector<int>>& grid) {
             case 0:  wcout << L". "; break; // Path
             case 2:  wcout << L"S "; break; // Start point
             case 3:  wcout << L"E "; break; // End point
-            case 4:  wcout << L"^ "; break; // User path
+            case 4:  wcout << L"\x2299 "; break; // User path
             }
         }
         wcout << endl;
@@ -153,7 +153,7 @@ int main() {
 
     srand(static_cast<unsigned int>(time(NULL)));
 
-    int gridS = 8;
+    int gridS = 10;
     vector<vector<int>> grid(gridS, vector<int>(gridS, 0));
 
     pair<int, int> start = randomPt(gridS, 1);
