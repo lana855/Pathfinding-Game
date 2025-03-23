@@ -8,7 +8,7 @@
 #include <io.h>
 #include <fcntl.h>
 #include <functional>
-
+#include <clocale>
 using namespace std;
 
 // Directions for 4 connected cells (Up, Down, Left, Right)
@@ -129,6 +129,10 @@ void Hidden(const wstring& name) {
 }
 
 int main() {
+
+
+    setlocale(LC_ALL, "en_US.UTF-8");
+
     if (_setmode(_fileno(stdout), _O_U16TEXT) == -1) {
         cerr << "Error setting console mode to UTF-16" << endl;
         return 1;
@@ -201,6 +205,11 @@ int main() {
 
         if (x < 0 || x >= static_cast<int>(grid.size()) || y < 0 || y >= static_cast<int>(grid[0].size()) || grid[x][y] == -1) {
             wcout << L"Invalid Input! Try to avoid walls (\x00AC_\x00AC\") \n";
+            continue;
+        }
+
+        if (make_pair(x, y) == start) {
+            wcout << L"Invalid Input! You can't go back to the start point (\x00AC_\x00AC\")\n";
             continue;
         }
 
